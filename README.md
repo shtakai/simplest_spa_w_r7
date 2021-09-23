@@ -1,24 +1,20 @@
-# README
+## simple spa w/rails 7
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- For researching, I've implemented a simple configuration wo/dockernize.
+- Fixed ruby and node version. (ruby: 3.0.2, node: 14.17.6)
+- rails: 7.0.0 alpha2
+- DB: sqlite3
+- React
+- TS(just one component only)
+- esbuild
+- tailwindcss
 
-Things you may want to cover:
+```shell
+# clone and chdir
+# then
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+$ bundle install
+$ yarn
+$ rails db:create && rails db:migrate && rails db:seed
+$ bin/dev
+```
