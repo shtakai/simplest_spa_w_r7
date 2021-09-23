@@ -34,5 +34,6 @@ module R7test1
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.action_dispatch.cookies_same_site_protection = :none if Rails.env.production?
   end
 end

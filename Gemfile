@@ -34,14 +34,19 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", ">= 1.4.4", require: false
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Use Sass to process CSS
 # gem "sassc-rails", "~> 2.1"
-
+gem 'rack-cors'
+gem 'rails_same_site_cookie', '~> 0.1.8'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'jsonapi-serializer'
+
+# prodでも使う
+gem 'pry-rails'
 group :development, :test do
   # Start debugger with binding.b [https://github.com/ruby/debug]
   gem "debug", ">= 1.0.0", platforms: %i[ mri mingw x64_mingw ]

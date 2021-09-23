@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'homes#index'
+  # get 'homes', to: 'homes#index'
 
-  # Almost every application defines a route for the root path ("/") at the top of this file.
-  # root "articles#index"
+  namespace :api do
+    namespace :v1 do
+      get 'ping', to: 'sessions#ping'
+      post 'login', to: 'sessions#login'
+      delete 'logout', to: 'sessions#logout'
+      get 'pinga', to: 'sessions#pinga'
+
+      resources :posts, only: %i[index show create update destroy]
+    end
+  end
 end
